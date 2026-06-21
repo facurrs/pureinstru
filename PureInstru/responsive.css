@@ -1,0 +1,114 @@
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .beats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audio-player {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .player-info {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .player-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .player-progress {
+        width: 100%;
+    }
+
+    .filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .remove-item-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .beat-card {
+        padding: 1rem;
+    }
+
+    .beat-title {
+        font-size: 1.1rem;
+    }
+
+    .beat-actions {
+        flex-direction: column;
+    }
+
+    .beat-btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .beats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

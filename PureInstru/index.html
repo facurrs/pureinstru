@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatStore - Instrumentais Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🎵 BeatStore</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" data-lang="home">Início</a></li>
+                    <li><a href="#beats" data-lang="beats">Beats</a></li>
+                    <li><a href="#contact" data-lang="contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <select id="language-selector" class="language-selector">
+                    <option value="pt">🇵🇹 PT</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="es">🇪🇸 ES</option>
+                    <option value="fr">🇫🇷 FR</option>
+                </select>
+                <button class="cart-btn" id="cart-btn">
+                    🛒 <span class="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" data-lang="home">Início</a></li>
+            <li><a href="#beats" data-lang="beats">Beats</a></li>
+            <li><a href="#contact" data-lang="contact">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-lang="hero-title">Instrumentais Premium</h1>
+            <p class="hero-subtitle" data-lang="hero-subtitle">Kizomba, Marrabenta, Hip Hop, House Music, Jazz e muito mais</p>
+            <a href="#beats" class="btn btn-primary" data-lang="explore-beats">Explorar Beats</a>
+        </div>
+    </section>
+
+    <!-- Beats Section -->
+    <section id="beats" class="beats-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="beats-title">Nossos Beats</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all" data-lang="all">Todos</button>
+                <button class="filter-btn" data-filter="kizomba">Kizomba</button>
+                <button class="filter-btn" data-filter="marrabenta">Marrabenta</button>
+                <button class="filter-btn" data-filter="hiphop">Hip Hop</button>
+                <button class="filter-btn" data-filter="house">House Music</button>
+                <button class="filter-btn" data-filter="jazz">Jazz</button>
+            </div>
+
+            <!-- Beats Grid -->
+            <div class="beats-grid" id="beats-grid">
+                <!-- Beats serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="contact-title">Contato</h2>
+            <form class="contact-form" id="contact-form">
+                <input type="text" placeholder="Nome" data-lang-placeholder="name" required>
+                <input type="email" placeholder="Email" data-lang-placeholder="email" required>
+                <textarea placeholder="Mensagem" data-lang-placeholder="message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary" data-lang="send">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BeatStore. <span data-lang="rights">Todos os direitos reservados.</span></p>
+        </div>
+    </footer>
+
+    <!-- Audio Player -->
+    <div class="audio-player" id="audio-player">
+        <div class="player-info">
+            <span class="player-icon" id="player-icon">🎵</span>
+            <div class="player-details">
+                <h4 id="player-title">Selecione um beat</h4>
+                <p id="player-category">-</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="player-btn" id="prev-btn">⏮</button>
+            <button class="player-btn play-btn" id="play-btn">▶️</button>
+            <button class="player-btn" id="next-btn">⏭</button>
+        </div>
+        <div class="player-progress">
+            <input type="range" id="progress-bar" min="0" max="100" value="0">
+            <span id="time-display">0:00 / 0:00</span>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-lang="cart-title">Carrinho de Compras</h3>
+                <button class="close-btn" id="close-cart">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Items serão inseridos aqui -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-lang="total">Total:</span>
+                    <span id="cart-total">€0.00</span>
+                </div>
+                <button class="btn btn-primary" id="checkout-btn" data-lang="checkout">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
